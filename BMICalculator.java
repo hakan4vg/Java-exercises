@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 public class BMICalculator {
-    public static void main(String[] args){
+    public void calculateBMI(){
         Scanner input = new Scanner(System.in);
 
         //Prompt user to decide which system they want to use
