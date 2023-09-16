@@ -20,11 +20,16 @@ public class BMICalculator {
             //Prompt user to input their height in centimeters
             System.out.print("Enter your height in meters: ");
             heightInMetric = input.nextDouble();
+            if (heightInMetric>3) {
+                heightInMetric = heightInMetric / 100;
+                System.out.println("Given height is divided by 100 to get the result in meters.");
+            }
+/*
             while (heightInMetric>10){
                 System.out.print("Given height is not in meters: ");
                 heightInMetric = input.nextDouble();
             }
-
+*/
         }
         else if (sis.equals("Imperial")){
             //Prompt user to input their weight in pounds
