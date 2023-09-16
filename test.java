@@ -5,12 +5,16 @@ public class test {
         int selector=0;
         BMICalculator bmiCalculator = new BMICalculator();
         TaxCalculator taxCalculator = new TaxCalculator();
+        LeapYear leapYear = new LeapYear();
+        LotteryGame lotteryGame = new LotteryGame();
 
 //        Asks user to select which code they want to try.
-        while (selector <=0 || selector>2){
+        while (selector <=0 || selector>4){
             System.out.print("""
                     \n1-BMI Calculator
                     2-Tax Calculator(WIP)
+                    3-Leap Year Calculator
+                    4-Lottery Game
                     Select which code you want to try:""");
             selector = input.nextInt();}
         System.out.println();
@@ -22,6 +26,12 @@ public class test {
                 break;
             case 2:
                 taxCalculator.calculateTaxes();
+                break;
+            case 3:
+                leapYear.calculateLeapYear();
+                break;
+            case 4:
+                lotteryGame.playLotteryGame();
                 break;
         }
     }
