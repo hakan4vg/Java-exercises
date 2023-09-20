@@ -9,16 +9,18 @@ public class test {
         TaxCalculator taxCalculator = new TaxCalculator();
         LeapYear leapYear = new LeapYear();
         LotteryGame lotteryGame = new LotteryGame();
+        QuadraticEquationSolver quadraticEquation = new QuadraticEquationSolver();
 
         while (true) { // Infinite loop
             // Asks the user to select which code they want to try.
-            while (selector <= 0 || selector > 5) {
+            while (selector <= 0 || selector > 6) {
                 System.out.print("""
                         \n1-BMI Calculator
                         2-Tax Calculator(WIP)
                         3-Leap Year Calculator
                         4-Lottery Game
-                        5-Lottery Game With Account Selection(WIP)
+                        5-Lottery Game With Account Selection
+                        6-Quadratic Equation Solver
                         Type 'q' to exit
                         Select which code you want to try:""");
                 String choice = input.next();
@@ -77,6 +79,10 @@ public class test {
 
                     GuessingGame guessingGame = new GuessingGame(userDatabase);
                     guessingGame.playGame(username, password, bet, guess);
+                    break;
+
+                case 6:
+                    quadraticEquation.solveQuadratic();
                     break;
                 default:
                     System.out.println("Invalid selection. Please try again.");
